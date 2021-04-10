@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.map.NearbyP">
+
+    <ImageView
+        android:layout_width="77dp"
+        android:layout_height="59dp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_baseline_person_pin_24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100sp"
+        android:layout_marginTop="6dp"
+        android:text="User: "
+        android:textColor="@color/teal_200"
+        android:textSize="37dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="37dp"
+        android:textStyle="bold"
+        android:textColor="@color/teal_200"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="195dp"
+       android:id="@+id/user"
+        android:hint="Usernme"/>
+
+    <ViewFlipper
+        android:id="@+id/flipper"
+        android:layout_marginTop="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="244dp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="481dp"
+        android:layout_marginTop="290dp"
+        android:src="@drawable/homer" />
+
+
+</androidx.cardview.widget.CardView>

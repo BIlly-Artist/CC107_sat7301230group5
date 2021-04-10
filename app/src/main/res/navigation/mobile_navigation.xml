@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_mapa"
+    app:startDestination="@id/nav_slideshow2">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.lguprojectc.ui.map.NearbyP"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_location"
+        android:name="com.example.lguprojectc.ui.location.CardviewActivity"
+        android:label="@string/menu_maps"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.lguprojectc.ui.home.Home"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_chatt"
+        android:name="com.example.lguprojectc.ui.admin.Admin"
+        android:label="@string/menu_chat" />
+    <fragment
+        android:id="@+id/nav_aboutus"
+        android:name="com.example.lguprojectc.ui.AboutUs.Info"
+        android:label="@string/menu_aboutus" />
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.lguprojectc.ui.logout.Out"
+        android:label="@string/menu_logout" />
+    <fragment
+        android:id="@+id/nav_slideshow2"
+        android:name="com.example.lguprojectc.ui.way.RouteActivity"
+        android:label="@string/menu_route" />
+</navigation>

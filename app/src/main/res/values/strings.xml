@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">LGUPROJECTC</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_navmain">NavmainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Maps</string>
+    <string name="menu_slideshow">Home</string>
+    <string name="menu_maps">Emergency Response</string>
+    <string name="menu_route">Route</string>
+    <string name="menu_chat">Tips</string>
+    <string name="menu_aboutus">About Us</string>
+    <string name="menu_logout">Logout</string>
+</resources>

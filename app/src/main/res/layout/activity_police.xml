@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:id="@+id/rt"
+    android:background="@drawable/bgpolice"
+    tools:context=".Police"
+    >
+
+<EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textStyle="bold"
+    android:textSize="30sp"
+    android:layout_marginTop="10sp"
+    android:text="Verifying"
+    android:textColor="@color/teal_700"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="238dp"
+        android:layout_gravity="top"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="217dp"
+            android:layout_gravity="center"
+            android:src="@drawable/helperpolice" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="411dp"
+        android:layout_height="417dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:padding="40dp">
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_gravity="top"
+            android:layout_toEndOf="@+id/spinner1" />
+
+        <TextView
+            android:id="@+id/reason"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:hint="Enter your reason"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/et_source"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+
+            android:hint="  Current Location "
+            android:padding="12dp" />
+
+        <Button
+            android:id="@+id/bt_track"
+            android:layout_width="287dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="3dp"
+            android:text="Submit"
+
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>
+
+
+

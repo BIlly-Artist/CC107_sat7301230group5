@@ -1,20 +1,15 @@
 package com.example.lguprojectc.ui.admin;
 
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.lguprojectc.R;
-import com.example.lguprojectc.Route;
 
 public class Admin extends Fragment {
 

@@ -103,55 +103,9 @@ public class NearbyP extends Fragment implements OnMapReadyCallback,
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         root = inflater.inflate(R.layout.activity_maps2, container, false);
-
+        tf_location = (EditText) root.findViewById(R.id.TF_location);
         spinner = root.findViewById(R.id.spinner1);
         spinner2 = root.findViewById(R.id.spinner2);
-
-
-
-
-
-        sendd = (Button)root.findViewById(R.id.B_search);
-        sendd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Object dataTransfer[] = new Object[12];
-                GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
-
-                tf_location = (EditText) root.findViewById(R.id.TF_location);
-                String location = tf_location.getText().toString();
-
-                List<Address> addressList = null;
-                MarkerOptions mo = new MarkerOptions();
-
-
-                if (sendd == sendd) {
-
-                    if (!location.equals("")) {
-                        Geocoder geocoder = new Geocoder(getActivity());
-                        try {
-                            addressList = geocoder.getFromLocationName(location, 5);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        for (int i = 0; i < addressList.size(); i++) {
-                            Address myAddress = addressList.get(i);
-                            LatLng latLng = new LatLng(myAddress.getLatitude(), myAddress.getLongitude());
-                            mo.position(latLng);
-                            mo.title("your search result");
-                            mMap.addMarker(mo);
-
-                            mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
-                        }
-                    }
-                }
-
-
-            }
-        });
-
-
 
 
 
@@ -182,7 +136,7 @@ public class NearbyP extends Fragment implements OnMapReadyCallback,
                     tf_location.setText(snum);
 
                 }
-                else if(parent.getItemAtPosition(position).equals("Ambulace")){
+                else if(parent.getItemAtPosition(position).equals("BFP Taguig City Fire Station1")){
 
                 }
                 else {
@@ -270,6 +224,60 @@ public class NearbyP extends Fragment implements OnMapReadyCallback,
 
             }
         });
+
+
+
+
+
+
+        sendd = (Button)root.findViewById(R.id.B_search);
+        sendd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Object dataTransfer[] = new Object[12];
+                GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData();
+
+                String location = tf_location.getText().toString();
+
+                List<Address> addressList = null;
+                MarkerOptions mo = new MarkerOptions();
+
+
+                if (sendd == sendd) {
+
+                    if (!location.equals("") ) {
+                        Geocoder geocoder = new Geocoder(getActivity());
+                        try {
+                            addressList = geocoder.getFromLocationName(location, 5);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        for (int i = 0; i < addressList.size(); i++) {
+                            Address myAddress = addressList.get(i);
+                            LatLng latLng = new LatLng(myAddress.getLatitude(), myAddress.getLongitude());
+                            mo.position(latLng);
+                            mo.title("your search result");
+                            mMap.addMarker(mo);
+
+                            mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+                        }
+                    }
+
+
+
+
+
+
+
+
+                }
+
+
+            }
+        });
+
+
 
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)

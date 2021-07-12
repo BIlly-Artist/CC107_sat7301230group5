@@ -27,7 +27,7 @@ public class Register extends AppCompatActivity {
     TextView textView;
     TextInputEditText user, pass , num, fname;
     String str_user, str_pass,str_fname, str_num ;
-    String url ="https://websitenibill.000webhostapp.com/Register.php";
+    String url ="https://lguressssssssssssssss.000webhostapp.com/Register.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

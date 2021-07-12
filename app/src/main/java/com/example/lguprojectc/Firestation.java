@@ -1,15 +1,12 @@
 package com.example.lguprojectc;
 
 import android.Manifest;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -24,8 +21,7 @@ import androidx.core.app.ActivityCompat;
 
 import java.util.ArrayList;
 
-public class Police extends AppCompatActivity {
-
+public class Firestation extends AppCompatActivity {
     EditText etSource;
     Spinner spinner;
     TextView tf_location;
@@ -36,7 +32,7 @@ public class Police extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_police);
+        setContentView(R.layout.activity_routeresponse);
 
         etSource = findViewById(R.id.et_source);
         btTrack = findViewById(R.id.bt_track);
@@ -46,9 +42,11 @@ public class Police extends AppCompatActivity {
 
         ArrayList<String> Ambulances = new ArrayList<>();
         Ambulances.add("Select a Contact Number");
-        Ambulances.add("0921-7221972");
-        Ambulances.add("642-3582");
-        Ambulances.add("1623");
+        Ambulances.add("837-0740");
+        Ambulances.add("837-4496");
+        Ambulances.add("642-9982");
+        Ambulances.add("837-4496");
+        Ambulances.add("0919-0703112");
 
         spinner.setAdapter(new ArrayAdapter<>(getApplication(),
                 android.R.layout.simple_spinner_dropdown_item, Ambulances));
@@ -59,17 +57,28 @@ public class Police extends AppCompatActivity {
 
                 if(parent.getItemAtPosition(position).equals("Select a Contact Number")){
 
-                }else if (parent.getItemAtPosition(position).equals("0921-7221972"))
+                }else if (parent.getItemAtPosition(position).equals("837-0740"))
                 {
                     String snum = parent.getItemAtPosition(position).toString();
                     etSource.setText(snum);
 
-                }else if (parent.getItemAtPosition(position).equals("1623"))
+                }else if (parent.getItemAtPosition(position).equals("837-4496"))
                 {
                     String snum = parent.getItemAtPosition(position).toString();
                     etSource.setText(snum);
 
-                }else if (parent.getItemAtPosition(position).equals("642-3582"))
+                }else if (parent.getItemAtPosition(position).equals("642-9982"))
+                {
+                    String snum = parent.getItemAtPosition(position).toString();
+                    etSource.setText(snum);
+
+                }else if (parent.getItemAtPosition(position).equals("837-4496"))
+                {
+                    String snum = parent.getItemAtPosition(position).toString();
+                    etSource.setText(snum);
+
+
+                }else if (parent.getItemAtPosition(position).equals("0919-0703112"))
                 {
                     String snum = parent.getItemAtPosition(position).toString();
                     etSource.setText(snum);
@@ -105,7 +114,7 @@ public class Police extends AppCompatActivity {
 
 //                            String uname = getIntent().getStringExtra("Keyname");
 
-                            AlertDialog dialog = new AlertDialog.Builder(Police.this)
+                            AlertDialog dialog = new AlertDialog.Builder(Firestation.this)
                                     .setIcon(R.drawable.ic_baseline_add_alert_24)
                                     .setTitle("Nearby Response are Ready to Rescue")
                                     .setMessage("Click yes if this is an emegency")
@@ -115,22 +124,12 @@ public class Police extends AppCompatActivity {
                                         public void onClick(DialogInterface dialog, int which) {
 
 
-//                                            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-//                                                if (checkSelfPermission(Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED){
-////                                    sendSMS();
-//                                                }
-//                                                else {
-//                                                    requestPermissions(new String[] {Manifest.permission.SEND_SMS}, 1);
-//                                                }
-//                                            }
-
-
                                             Intent intent = new Intent(Intent.ACTION_CALL);
                                             intent.setData(Uri.parse("tel:" + sSource));
 
 
                                             if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                                                Toast.makeText(Police.this, "PLease Grand Permission", Toast.LENGTH_LONG).show();
+                                                Toast.makeText(Firestation.this, "PLease Grand Permission", Toast.LENGTH_LONG).show();
                                                 requestPermissions();
                                             } else {
                                                 startActivity(intent);
@@ -161,7 +160,7 @@ public class Police extends AppCompatActivity {
 
     private void requestPermissions() {
 
-        ActivityCompat.requestPermissions(Police.this, new String[] {Manifest.permission.CALL_PHONE}, 1);
+        ActivityCompat.requestPermissions(Firestation.this, new String[] {Manifest.permission.CALL_PHONE}, 1);
     }
 
 }

@@ -1,22 +1,20 @@
 package com.example.lguprojectc.ui.location;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.lguprojectc.Contact;
+import com.example.lguprojectc.MedicResponse;
 import com.example.lguprojectc.Police;
 import com.example.lguprojectc.R;
-import com.example.lguprojectc.Route;
+import com.example.lguprojectc.Firestation;
 
 public class CardviewActivity extends Fragment {
     CardView c1, c2, c3, c4;
@@ -48,20 +46,12 @@ public class CardviewActivity extends Fragment {
        c1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog dialog = new AlertDialog.Builder(getActivity())
-                        .setTitle("Emergency")
-                        .setMessage("Waiting For admin Apporval")
-                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Intent integer = new Intent(getActivity(), Route.class);
+
+                                Intent integer = new Intent(getActivity(), MedicResponse.class);
                                 startActivity(integer);
 
                             }
-                        })
-                        .show();
-            }
-       });
+                        });
 
 
 
@@ -70,20 +60,12 @@ public class CardviewActivity extends Fragment {
         c2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog dialog = new AlertDialog.Builder(getActivity())
-                        .setTitle("Emergency")
-                        .setMessage("Waiting For admin Apporval")
-                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Intent integer = new Intent(getActivity(), Route.class);
+
+                                Intent integer = new Intent(getActivity(), Firestation.class);
                                 startActivity(integer);
 
                             }
-                        })
-                        .show();
-            }
-        });
+                        });
 
 
 
@@ -92,20 +74,13 @@ public class CardviewActivity extends Fragment {
         c3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog dialog = new AlertDialog.Builder(getActivity())
-                        .setTitle("Emergency")
-                        .setMessage("Waiting For admin Apporval")
-                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
+
                                 Intent integer = new Intent(getActivity(), Police.class);
                                 startActivity(integer);
 
                             }
-                        })
-                        .show();
-            }
-        });
+                        });
+
 
         return root;
     }

@@ -46,6 +46,15 @@
         android:orientation="vertical"
         android:padding="40dp">
 
+
+        <TextView
+            android:id="@+id/reason"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:hint="PNP TAGUIG"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30sp" />
         <Spinner
             android:id="@+id/spinner2"
             android:layout_width="match_parent"
@@ -53,19 +62,14 @@
             android:layout_gravity="top"
             android:layout_toEndOf="@+id/spinner1" />
 
-        <TextView
-            android:id="@+id/reason"
-            android:layout_width="match_parent"
-            android:layout_height="71dp"
-            android:hint="Enter your reason"
-            android:textSize="30sp" />
+
 
         <EditText
             android:id="@+id/et_source"
             android:layout_width="match_parent"
             android:layout_height="65dp"
 
-            android:hint="  Current Location "
+            android:hint=""
             android:padding="12dp" />
 
         <Button
@@ -73,9 +77,10 @@
             android:layout_width="287dp"
             android:layout_height="62dp"
             android:layout_gravity="center"
+            android:textSize="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="3dp"
-            android:text="Submit"
+            android:text="Call"
 
             android:textStyle="bold" />
     </LinearLayout>

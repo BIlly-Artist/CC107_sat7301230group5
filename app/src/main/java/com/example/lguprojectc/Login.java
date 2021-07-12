@@ -30,7 +30,7 @@ import java.util.Map;
 public class Login extends AppCompatActivity {
     EditText user, pass ;
     String str_user, str_pass;
-    String url ="https://websitenibill.000webhostapp.com/Login.php";
+    String url ="https://lguressssssssssssssss.000webhostapp.com/Login.php";
    TextView textView;
    Button button;
     @Override

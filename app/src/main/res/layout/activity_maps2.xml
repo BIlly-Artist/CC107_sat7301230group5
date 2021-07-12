@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_alignParentBottom="true"
     android:layout_alignParentStart="true"
-    android:background="@drawable/responsebg"
+
     xmlns:android="http://schemas.android.com/apk/res/android"
     tools:context=".ui.map.NearbyP"
     android:id="@+id/nav_maps">
@@ -15,7 +15,7 @@
 
     <Button
         android:id="@+id/B_search"
-        android:layout_width="118dp"
+        android:layout_width="wrap_content"
         android:layout_height="47dp"
         android:layout_alignStart="@+id/TF_location"
         android:layout_alignParentTop="true"
@@ -28,19 +28,20 @@
         android:background="@color/common_google_signin_btn_text_dark_pressed"
         android:onClick="onClick"
         android:paddingTop="@dimen/cardview_default_elevation"
-
+        android:textSize="11dp"
         android:text="Search" />
 
     <Spinner
         android:id="@+id/spinner1"
         android:layout_width="160dp"
         android:layout_height="45dp"
+
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="621dp" />
 
     <Spinner
         android:id="@+id/spinner2"
-        android:layout_width="206dp"
+        android:layout_width="214dp"
         android:layout_height="44dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
@@ -63,10 +64,12 @@
     <EditText
         android:id="@+id/TF_location"
         android:layout_width="286dp"
-
+        android:textColor="@color/pink"
         android:layout_height="61dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="560dp"
+        android:hint="  Search here"
+        android:textSize="22dp"
         android:ems="10"
         android:inputType="textPersonName" />
 

@@ -12,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.lguprojectc.R;
-import com.example.lguprojectc.Route;
 import com.example.lguprojectc.markroute;
 import com.example.lguprojectc.routeCar;
 import com.example.lguprojectc.routeMotor;

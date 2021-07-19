@@ -38,11 +38,7 @@
         <activity android:name=".routeMotor" />
         <activity android:name=".routeCar" />
         <activity android:name=".SplashActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity> <!-- android:parentActivityName=".StartChat" -->
         <!--  -->
         <activity android:name=".MainActivity" /> <!-- android:parentActivityName=".StartChat" -->
@@ -65,7 +61,13 @@
         <activity
             android:name=".NavmainActivity"
             android:label="@string/title_activity_navmain"
-            android:theme="@style/Theme.LGUPROJECTC.NoActionBar" />
+            android:theme="@style/Theme.LGUPROJECTC.NoActionBar"
+            > <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+        </activity>
     </application>
 
 </manifest>

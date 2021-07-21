@@ -30,7 +30,7 @@ public class Police extends AppCompatActivity {
     Spinner spinner;
     TextView tf_location;
     Button btTrack;
-//    String num = "1623";
+    String sSource;
 
 
     @Override
@@ -90,7 +90,7 @@ public class Police extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String sSource = etSource.getText().toString().trim();
+                sSource = etSource.getText().toString().trim();
 
                 if(sSource.equals("")){
                     Toast.makeText(getApplicationContext(), "Enter a number", Toast.LENGTH_SHORT).show();
@@ -98,12 +98,7 @@ public class Police extends AppCompatActivity {
                 }
 
                 else {
-                    btTrack.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
 
-
-//                            String uname = getIntent().getStringExtra("Keyname");
 
                             AlertDialog dialog = new AlertDialog.Builder(Police.this)
                                     .setIcon(R.drawable.ic_baseline_add_alert_24)
@@ -114,15 +109,6 @@ public class Police extends AppCompatActivity {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
 
-
-//                                            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-//                                                if (checkSelfPermission(Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED){
-////                                    sendSMS();
-//                                                }
-//                                                else {
-//                                                    requestPermissions(new String[] {Manifest.permission.SEND_SMS}, 1);
-//                                                }
-//                                            }
 
 
                                             Intent intent = new Intent(Intent.ACTION_CALL);
@@ -142,10 +128,7 @@ public class Police extends AppCompatActivity {
                                     })
                                     .show();
                         }
-                    });
 
-
-                }
 
 
 

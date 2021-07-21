@@ -84,4 +84,5 @@ public class CardviewActivity extends Fragment {
 
         return root;
     }
+
 }

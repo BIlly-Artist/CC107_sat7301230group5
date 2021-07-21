@@ -23,7 +23,7 @@ public class Info extends Fragment {
         vfli = (ViewFlipper) root.findViewById(R.id.flipper);
 
 
-        int images[] = {R.drawable.gp1,R.drawable.gp2,R.drawable.gp3,R.drawable.gp4,R.drawable.gp5, R.drawable.gp6};
+        int images[] = {R.drawable.gp1,R.drawable.gp3, R.drawable.gp6};
 
         for (int i = 0; i < images.length;i++){
             flipperImages(images[i]);

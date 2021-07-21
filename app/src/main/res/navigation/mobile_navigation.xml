@@ -23,7 +23,7 @@
         tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/nav_chatt"
-        android:name="com.example.lguprojectc.ui.admin.Admin"
+        android:name="com.example.lguprojectc.ui.tips.firstaid"
         android:label="@string/menu_chat" />
     <fragment
         android:id="@+id/nav_aboutus"

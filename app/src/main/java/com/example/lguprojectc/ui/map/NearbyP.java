@@ -137,7 +137,8 @@ public class NearbyP extends Fragment implements OnMapReadyCallback,
 
                 }
                 else if(parent.getItemAtPosition(position).equals("BFP Taguig City Fire Station1")){
-
+                    String snum = parent.getItemAtPosition(position).toString();
+                    tf_location.setText(snum);
                 }
                 else {
                     String snum = parent.getItemAtPosition(position).toString();

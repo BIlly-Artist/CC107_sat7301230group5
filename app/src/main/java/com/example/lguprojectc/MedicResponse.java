@@ -95,12 +95,6 @@ public class MedicResponse extends AppCompatActivity {
                 }
 
                 else {
-                    btTrack.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-
-
-//                            String uname = getIntent().getStringExtra("Keyname");
 
                             AlertDialog dialog = new AlertDialog.Builder(MedicResponse.this)
                                     .setIcon(R.drawable.ic_baseline_add_alert_24)
@@ -128,10 +122,7 @@ public class MedicResponse extends AppCompatActivity {
                                     })
                                     .show();
                         }
-                    });
 
-
-                }
 
 
 

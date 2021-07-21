@@ -23,6 +23,7 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.lguprojectc.ui.home.Home;
 import com.example.lguprojectc.ui.location.CardviewActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -58,10 +59,14 @@ public class Contact extends AppCompatActivity {
             @Override
             public void onClick(View v) {
               cpp = Cp.getText().toString().trim();
+
+
                 Intent intent = new Intent(Intent.ACTION_CALL);
                 intent.setData(Uri.parse("tel:" + cpp));
 
-
+                Intent intentt = getIntent();
+                finish();
+                startActivity(intentt);
 
 
 
@@ -215,4 +220,11 @@ public class Contact extends AppCompatActivity {
         ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.CALL_PHONE}, 1);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(this, NavmainActivity.class);
+        finish();
+        startActivity(intent);
+    }
 }
